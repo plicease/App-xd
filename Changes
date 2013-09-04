@@ -2,5 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.02      2013-09-04 19:04:29 -0400
+  - make last line line up
+
 0.01      2013-09-04 18:57:34 -0400
   - initial version
