@@ -36,7 +36,7 @@ sub do_file
       $hex =~ s/([a-f0-9]{2})/$1 /g;
       my $str = $buff;
       $str =~ s/[^[:graph:] ]/./g;
-      printf "%08x %s %s\n", $offset, $hex, $str;
+      printf "%08x %-48s%s\n", $offset, $hex, $str;
       $offset += $bytes;
     }
     else
