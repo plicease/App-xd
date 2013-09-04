@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use v5.10;
+
+# PODNAME: xd
+# ABSTRACT: hex dump
+# VERSION
+
+my $offset = 0;
+my $buff;
+
+if(@ARGV > 0)
+{
+  foreach my $fn (@ARGV)
+  {
+    open my $fh, '<', $fn;
+    do_file($fh);
+  }
+}
+else
+{
+  do_file(\*STDIN);
+}
+
+sub do_file
+{
+  my $fh = shift;
+  binmode $fh;
+  while(my $bytes = read($fh, $buff, 16))
+  {  
+    if(defined $bytes)
+    {
+      my $hex = unpack('h*', $buff);
+      $hex =~ s/([a-f0-9]{2})/$1 /g;
+      my $str = $buff;
+      $str =~ s/[^[:graph:] ]/./g;
+      printf "%08x %s %s\n", $offset, $hex, $str;
+      $offset += $bytes;
+    }
+    else
+    {
+      die "error reading file: $!";
+    }
+  }
+  close $fh;
+}
