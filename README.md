@@ -1,21 +1,14 @@
-=pod
+# App::xd
 
-=head1 NAME
+hex dump
 
-App::xd - hex dump
-
-=head1 VERSION
-
-version 0.02
-
-=head1 AUTHOR
+# AUTHOR
 
 Graham Ollis <plicease@cpan.org>
 
-=head1 COPYRIGHT AND LICENSE
+# COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2013 by Graham Ollis.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
