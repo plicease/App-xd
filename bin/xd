@@ -17,6 +17,7 @@ if(@ARGV > 0)
   {
     open my $fh, '<', $fn;
     do_file($fh);
+    close $fh;
   }
 }
 else
