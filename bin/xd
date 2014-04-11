@@ -8,6 +8,25 @@ use v5.10;
 # ABSTRACT: hex dump
 # VERSION
 
+=head1 SYNOPSIS
+
+ % xd foo.jpg
+
+=head1 DESCRIPTION
+
+This command is a wee bit like od except that it doesn't have any options and dumps hex and ASCII (printable)
+only.
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Data::HexDump>
+
+=back
+
+=cut
+
 my $offset = 0;
 my $buff;
 
