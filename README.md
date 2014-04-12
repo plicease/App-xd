@@ -1,6 +1,19 @@
-# App::xd
+# xd
 
 hex dump
+
+# SYNOPSIS
+
+    % xd foo.jpg
+
+# DESCRIPTION
+
+This command is a wee bit like od except that it doesn't have any options and dumps hex and ASCII (printable)
+only.
+
+# SEE ALSO
+
+- [Data::HexDump](https://metacpan.org/pod/Data::HexDump)
 
 # AUTHOR
 
