@@ -1,7 +1,6 @@
 language: perl
 
 perl:
-  - "5.8"
   - "5.10"
   - "5.12"
   - "5.14"
@@ -11,5 +10,5 @@ perl:
 install:
   - /bin/true
 
-script: prove -lv t xt
+script: prove -lv t
 
