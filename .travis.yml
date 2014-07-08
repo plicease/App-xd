@@ -8,5 +8,8 @@ perl:
   - "5.16"
   - "5.18"
 
+install:
+  - /bin/true
+
 script: prove -lv t xt
 
