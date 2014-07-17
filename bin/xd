@@ -52,7 +52,7 @@ sub do_file
   {  
     if(defined $bytes)
     {
-      my $hex = unpack('h*', $buff);
+      my $hex = unpack('H*', $buff);
       $hex =~ s/([a-f0-9]{2})/$1 /g;
       my $str = $buff;
       $str =~ s/[^[:graph:] ]/./g;

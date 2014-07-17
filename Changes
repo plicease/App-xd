@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - had high and low nibbles backwards
 
 0.02      2013-09-04 19:04:29 -0400
   - make last line line up
