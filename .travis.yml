@@ -10,7 +10,7 @@ perl:
   - "5.21"
 
 install:
-  - /bin/true
+  - cpanm Test::Script
 
 script: prove -lv t
 
