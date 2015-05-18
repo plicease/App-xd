@@ -5,11 +5,23 @@ hex dump
 # SYNOPSIS
 
     % xd foo.jpg
+    % xd --help
+    % xd --version
 
 # DESCRIPTION
 
 This command is a wee bit like od except that it doesn't have any options and dumps hex and ASCII (printable)
 only.
+
+# OPTIONS
+
+## --help | -h
+
+Print help and exit
+
+## --version
+
+Print version and exit
 
 # SEE ALSO
 

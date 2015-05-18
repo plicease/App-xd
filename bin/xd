@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 use 5.010;
+use Getopt::Long qw( GetOptions );
+use Pod::Usage qw( pod2usage );
 
 # PODNAME: xd
 # ABSTRACT: hex dump
@@ -11,11 +13,23 @@ use 5.010;
 =head1 SYNOPSIS
 
  % xd foo.jpg
+ % xd --help
+ % xd --version
 
 =head1 DESCRIPTION
 
 This command is a wee bit like od except that it doesn't have any options and dumps hex and ASCII (printable)
 only.
+
+=head1 OPTIONS
+
+=head2 --help | -h
+
+Print help and exit
+
+=head2 --version
+
+Print version and exit
 
 =head1 SEE ALSO
 
@@ -26,6 +40,14 @@ only.
 =back
 
 =cut
+
+GetOptions(
+  'help|h'       => sub { pod2usage({ -verbose => 2}) },
+  'version'      => sub {
+    say 'ACPS::Release version ', ($main::VERSION // 'dev');
+    exit 1;
+  },
+) || pod2usage(1);
 
 my $offset = 0;
 my $buff;
