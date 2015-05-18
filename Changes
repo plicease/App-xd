@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.04      2015-05-17 21:36:26 -0400
+  - Add --help and --version options
+
 0.03      2014-07-17 17:04:39 -0400
   - had high and low nibbles backwards
 
